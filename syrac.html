@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleSyrac.css">
+    <title>Document</title>
+</head>
+<body>
+  <section id="home">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#section2">Try your own image</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Help</a></li>
+    </ul>
+  </section>
+  <section id="section1">
+    <h1>Morphological Editor Design for Grayscale Images Using Quantum Cellular Automaton</h1>
+    <h1>Mathematical Morphology</h1>
+    <h3>First and foremost, lets take a brief moment to disguise about the basics.</h3>
+    
+    <p>Mathematical morphology is a branch of mathematical image processing and computer vision that 
+        deals with the analysis and processing of geometric structures in images and other spatially organized data. 
+        It was introduced by the French mathematician Georges Matheron in the 1960s and further developed by Jean Serra.
+    </p>
+    <p>The fundamental concept in mathematical morphology is the use of structuring elements, also known as kernels or masks, 
+        to probe an image or data set in order to extract meaningful information. These structuring elements are small patterns or shapes, 
+        often represented as binary matrices or sets of coordinates. 
+        They are used to explore and modify the pixels or elements of an image based on their spatial arrangement.
+    </p>
+    <p>The main operations in mathematical morphology include:</p>
+    <ul>
+      <li>
+        <p>Normal Image</p>
+      </li>
+      <li>
+        <p>Grayscale Image</p>
+      </li>
+      <li>
+        <p>Erosion</p>
+        <p>Erosion is an operation that reduces the size of bright regions (foreground) in an image by scanning the image 
+          with a structuring element and setting the center pixel of the structuring element to the minimum value in the neighborhood. 
+          It erodes the boundaries of the regions.
+        </p>
+      </li>
+      <li>
+        <p>Dilation</p>
+        <p>Dilation is the opposite of erosion. It increases the size of bright regions in an image by scanning the image 
+          with a structuring element and setting the center pixel of the structuring element to the maximum value in the neighborhood.
+        </p>
+      </li>
+      <li>
+        <p>Opening</p>
+        <p>Opening is a combination of erosion followed by dilation. 
+          It helps to remove small objects and noise from an image while preserving the overall shape of larger structures.
+        </p>
+      </li>
+      <li>
+        <p >Closing</p>
+        <p>
+          Closing is the reverse of opening, combining dilation followed by erosion. 
+          It helps to fill small gaps and holes in objects while preserving the overall structure.
+        </p>
+      </li>
+      <li>
+        <p>Hit-or-miss transform</p>
+        <p>
+          This operation is used to detect specific patterns in an image 
+          by defining two structuring elements, one for the foreground and one for the background.
+        </p>
+      </li>
+    </ul>
+    <p>The morphological operations first applied to binary images and later for   
+      grayscale images, and even other types of spatially organized data beyond images.
+    </p>
+  </section>
+  <section id="section2">
+    <h1 for="">Here you can to render your oun image</h1>
+    <h2 id="instructions">Instructions</h2>
+    <p>Here you are able to customize your own Image.</p>
+    <p>You can upload any Image as long as it's png, jpg or jpeg, otherwise the console.log will print false.</p>
+    <p>There is no database so the image (as also the rendering) is done completely in your PC. </p>
+    <p>The neighborhood is set to 11(array of 11x11) in order for the rendering to be visible. If neighborhood was a 3x3 or 5x5 area the effect wouldn't be so distinct. This way it would only make some difference in lower resolution images.</p>
+    <p>Thank you for playing.</p>
+    <form id="filterForm">
+      <input type="file" id="uploadInput" required>
+      <img src="" alt="" id="image_displayPreview">
+      <label for="r_option">Render Option</label>
+      <select name="choice" id="r_option">
+        <option value="default">--Select Rendering--</option>
+        <option value="grayscale">Grayscale</option>
+        <option value="erosion">Erosion</option>
+        <option value="dilation">Dilation</option>
+      </select>
+      <button type="submit" id="button_submit">Convert</button>
+    </form>
+    <div id="image_Container"><img id="image_preview" src="" alt="Preview"></div>
+    <canvas id="canvas" style="display: none;"></canvas>
+  </section>
+  <script src="jsSyrac.js"></script>
+</body>
+</html>
