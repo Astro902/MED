@@ -231,13 +231,18 @@ function dilation(img) {
 //&                           &//
 //& /////////////////////////////
 
-instructions.addEventListener('click', function() {
-  alert('hi');
-});
-
-
-
 //END /////////////
 //END  Section2  //
 //END /////////////
 
+//SRT //////////////////////
+//SRT  INSTRUCTION BUTTON //
+//SRT //////////////////////
+
+// instructions.addEventListener('click', function() {
+//   alert('hi');
+// });
+
+//END //////////////////////
+//END  INSTRUCTION BUTTON //
+//END //////////////////////

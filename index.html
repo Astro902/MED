@@ -8,6 +8,8 @@
 </head>
 <body>
   <section id="home">
+    <a href="https://www.ee.duth.gr/"><img src="Images/democritus-un-Logo-PNG.webp" alt=""></a>
+    <a href="https://www.ee.duth.gr/"><p>DEMOCRITUS<br>UNIVERSITY<br>OF THRACE</p></a>
     <ul>
       <li><a href="#">Home</a></li>
       <li><a href="#section2">Try your own image</a></li>
@@ -76,12 +78,19 @@
     </p>
   </section>
   <section id="section2">
-    <h1 for="">Here you can to render your oun image</h1>
-    <h2 id="instructions">Instructions</h2>
-    <p>Here you are able to customize your own Image.</p>
-    <p>You can upload any Image as long as it's png, jpg or jpeg, otherwise the console.log will print false.</p>
-    <p>There is no database so the image (as also the rendering) is done completely in your PC. </p>
-    <p>The neighborhood is set to 11(array of 11x11) in order for the rendering to be visible. If neighborhood was a 3x3 or 5x5 area the effect wouldn't be so distinct. This way it would only make some difference in lower resolution images.</p>
+    <h1>Here you can to render your oun image</h1>
+    <div id="instructions">
+      <button id="instruction_Button">Instructions</button>
+      <div id="dropdown_Instructions">
+        <p>Here you are able to customize your own Image.</p>
+        <p>You can upload any Image as long as it's png, jpg or jpeg, otherwise the console.log will print false.</p>
+        <p>There is no database so the image (as also the rendering) is executed completely in your PC.</p>
+        <p>
+          The neighborhood is set to 11(array of 11x11) in order for the rendering to be visible. If neighborhood was a 3x3 or 5x5 area the 
+          effect wouldn't be so distinct. This way it would only make some difference in lower resolution images.
+        </p>
+      </div>
+    </div>
     <form id="filterForm">
       <input type="file" id="uploadInput" required>
       <img src="" alt="" id="image_displayPreview">
