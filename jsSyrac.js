@@ -89,7 +89,7 @@ function file_validation(uploadInput) {
   if (uploadInput.length !== 0) {
 
     const file_extension = uploadInput.name.split('.').pop().toLowerCase();
-    const allowed_extensions = ['jpg', 'jpeg', 'png'];
+    const allowed_extensions = ['jpg', 'jpeg', 'png', 'ico'];
 
     console.log(file_extension, allowed_extensions);
 
@@ -238,10 +238,6 @@ function dilation(img) {
 //SRT //////////////////////
 //SRT  INSTRUCTION BUTTON //
 //SRT //////////////////////
-
-// instructions.addEventListener('click', function() {
-//   alert('hi');
-// });
 
 //END //////////////////////
 //END  INSTRUCTION BUTTON //

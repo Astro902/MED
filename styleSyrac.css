@@ -6,6 +6,7 @@
   --rootColor: #3b3b3b;
   --instrAnimationBefore: calc(-2*38px + -15px + -20px);
   --instrAnimationAfter: calc(-2*38px + -15px);
+  --contButton: calc((9*18px + 20px)/2px);
 }
 
 * {
@@ -19,7 +20,7 @@
   background-color: var(--navBarColor);
   transform: translate(-8px, -8px);
   height: 78.2px;
-  margin-right: -15px;
+  margin-right: -16px;
 }
 
 #home > a {
@@ -204,6 +205,11 @@
   text-decoration: none;
   cursor: pointer;
   margin-left: 3%;
+  transition: color .3s;
+}
+
+#instruction_Button:hover {
+  color: var(--homeColor);
 }
 
 #dropdown_Instructions {
@@ -281,4 +287,62 @@ label {
   font-size: 14px;
   background-color: #fff;
   color: #333;
+}
+
+/* ---------------- Section3 Style ---------------- */
+
+#section3 {
+  background-color: var(--navBarColor);
+  height: 242px;
+  transform: translate(-8px, 8px);
+  margin-right: -16px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+#section3 div, #section3 div p, #section3 h2, #contact_Button {
+  background-color: var(--navBarColor);
+}
+
+#contact_Button, #about_Button, #help_Button {
+  font-size: 16px;
+  margin-left: 10%;
+  background: none;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#about_Button, #help_Button {
+  cursor: none;
+  pointer-events: none;
+}
+
+#contact_Button {
+  position: relative;
+  top: 64px;
+  transition: .6s ease-in-out;
+}
+
+#contact_Button:hover {
+  color: var(--homeColor);
+}
+
+#section3 div p {
+  font-size: 13.5px;
+  transform: translateX(-15px);
+  transition: .8s ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#contact_Button:focus ~ p {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#contact_Button:focus {
+  top: 0;
 }
