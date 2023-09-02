@@ -1,3 +1,4 @@
 Update 0.4
-Warning now displays when user don't have either picked the PICKER or uploaded an image or both.
+-Warning now displays when user don't have either picked the PICKER or uploaded an image or both.
+-Links are now ON, on the bottom of the page. Buttons' style: pointer-events: none;
 Update 0.5
