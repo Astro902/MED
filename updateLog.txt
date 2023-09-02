@@ -1,0 +1,3 @@
+Update 0.4
+Warning now displays when user don't have either picked the PICKER or uploaded an image or both.
+Update 0.5

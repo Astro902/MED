@@ -289,6 +289,21 @@ label {
   color: #333;
 }
 
+#please_SelectRender, #please_SelectBoth, #please_SelectImage {
+  display: none;
+  color:#e66465;
+}
+
+#please_SelectBoth.both_Warning {
+  display: block;
+}
+#please_SelectRender.picker_Warning {
+  display: block;
+}
+#please_SelectImage.image_Warning {
+  display: block;
+}
+
 /* ---------------- Section3 Style ---------------- */
 
 #section3 {
@@ -301,48 +316,30 @@ label {
   display: flex;
 }
 
-#section3 div, #section3 div p, #section3 h2, #contact_Button {
-  background-color: var(--navBarColor);
+#section3 div, #section3 div a, #section3 h2, #contact_Button {
+  background-color: transparent;
 }
 
 #contact_Button, #about_Button, #help_Button {
+  color: #c2c2c2;
   font-size: 16px;
-  margin-left: 10%;
+  max-width: 50%;
+  margin-left: 25%;
   background: none;
   border: none;
   text-decoration: none;
-  cursor: pointer;
-}
-
-#about_Button, #help_Button {
   cursor: none;
   pointer-events: none;
 }
 
-#contact_Button {
-  position: relative;
-  top: 64px;
-  transition: .6s ease-in-out;
+#contact_Button ~ a {
+  text-decoration: none;
+  display: block;
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #c2c2c2;
 }
 
-#contact_Button:hover {
-  color: var(--homeColor);
-}
-
-#section3 div p {
-  font-size: 13.5px;
-  transform: translateX(-15px);
-  transition: .8s ease-in-out;
-  opacity: 0;
-  pointer-events: none;
-}
-
-#contact_Button:focus ~ p {
-  transform: translateX(0);
-  opacity: 1;
-  pointer-events: auto;
-}
-
-#contact_Button:focus {
-  top: 0;
+#contact_Button + a {
+  margin-top: 10px;
 }

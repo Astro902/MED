@@ -1,7 +1,3 @@
-//SRT /////////////
-//SRT  Section2  //
-//SRT /////////////
-
 //& /////////////////////////////
 //&                           &//
 //&         VARIABLES         &//
@@ -13,6 +9,9 @@ const uploadInput = document.getElementById('uploadInput');
 const image_preview = document.getElementById('image_preview');
 const image_displayPreview = document.getElementById('image_displayPreview');
 const instructions = document.getElementById('instructions'); // reefers to alert block
+const please_SelectBoth = document.getElementById('please_SelectBoth');
+const please_SelectImage = document.getElementById('please_SelectImage');
+const please_SelectRender = document.getElementById('please_SelectRender');
 
 const valid_Pickers = ['grayscale', 'erosion', 'dilation'];
 
@@ -48,12 +47,25 @@ picker.addEventListener('change', function() {
 filterForm.addEventListener('submit', function(e) {
   e.preventDefault();
   if (file_validation_boolean && valid_Pickers.includes(picker)) {
-    console.log('boss will activate');
+    please_SelectBoth.classList.remove('both_Warning'); //! remove
+    please_SelectImage.classList.remove('image_Warning'); //! remove
+    please_SelectRender.classList.remove('picker_Warning');//! remove
+      console.log('boss will activate');
     boss();
   } if (file_validation_boolean && !valid_Pickers.includes(picker)) {
-    console.log('Please select picker');
-  } if (file_validation_boolean !== true) {
-    console.log('Please upload a file');
+    please_SelectBoth.classList.remove('both_Warning'); //! remove
+    please_SelectImage.classList.remove('image_Warning'); //! remove
+    please_SelectRender.classList.add('picker_Warning');
+      console.log('Please select picker');
+  } if (!file_validation_boolean && !valid_Pickers.includes(picker)) {
+    please_SelectImage.classList.remove('image_Warning'); //! remove
+    please_SelectRender.classList.remove('picker_Warning');//! remove
+    please_SelectBoth.classList.add('both_Warning');
+      console.log('Please upload a file');
+  } if (!file_validation_boolean && valid_Pickers.includes(picker)) {
+    please_SelectBoth.classList.remove('both_Warning'); //! remove
+    please_SelectRender.classList.remove('picker_Warning');//! remove
+    please_SelectImage.classList.add('image_Warning');
   } else {console.log('sth broke');}
 
 });
@@ -225,20 +237,23 @@ function dilation(img) {
   return canvas.toDataURL();
 };
 
+
+
+//& /////////////////////////////
+//&                           &//
+//&            FUN            &//
+//&                           &//
+//& /////////////////////////////
+
+const about_GlitchAnimation = getElementById('about_Button');
+
+about_GlitchAnimation.addEventListener('click', function() {
+  
+});
+
 //& /////////////////////////////
 //&                           &//
 //&           ALERTS          &//
 //&                           &//
 //& /////////////////////////////
 
-//END /////////////
-//END  Section2  //
-//END /////////////
-
-//SRT //////////////////////
-//SRT  INSTRUCTION BUTTON //
-//SRT //////////////////////
-
-//END //////////////////////
-//END  INSTRUCTION BUTTON //
-//END //////////////////////
