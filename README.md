@@ -1,5 +1,5 @@
 # MED
-Morphological Editor Design for Grayscale Images Using Quantum Cellular Automaton
+Morphological Editor Design for Grayscale Images Using Quantum Cellular Automata
 
 Here is the final Project Enjoy:
 
