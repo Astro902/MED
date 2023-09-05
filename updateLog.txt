@@ -6,3 +6,5 @@ Update 0.5
 -Description is ready above the screenshots.
 -Download button for files is now available.
 -Hover colors on buttons are now updated to --aquaColor.
+Update 0.6
+-Relax button added (yin-yang).

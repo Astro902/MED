@@ -397,7 +397,7 @@ label {
   display: flex;
 }
 
-#section3 div, #section3 div a, #section3 h2, #contact_Button {
+#section3 div:first-child, #section3 div a, #section3 h2, #contact_Button {
   background-color: transparent;
 }
 
@@ -427,4 +427,52 @@ label {
 
 #contact_Button + a {
   margin-top: 10px;
+}
+
+.yin-yang {
+  width: 50px;
+  box-sizing: content-box;
+  height: 25px;
+  background: #fff;
+  border-color: #333;
+  border-style: solid;
+  border-width: 2px 2px 26px 2px;
+  border-radius: 100%;
+  position: relative;
+  transition: 500ms ease-in-out;
+}
+.yin-yang:hover {
+  rotate: 180deg;
+}
+.yin-yang:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background: #fff;
+  border: 9.4px solid #333;
+  border-radius: 100%;
+  width: 6.25px;
+  height: 6.25px;
+  box-sizing: content-box;
+}
+.yin-yang:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: #333;
+  border: 9.4px solid #fff;
+  border-radius: 100%;
+  width: 6.25px;
+  height: 6.25px;
+  box-sizing: content-box;
+}
+
+#section3 p{
+  background-color: transparent;
+  color: #7a7a7a;
+  position: absolute;
+  transform: translateY(80px);
+  pointer-events: none;
 }
