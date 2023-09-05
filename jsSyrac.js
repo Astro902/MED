@@ -70,6 +70,8 @@ filterForm.addEventListener('submit', function(e) {
 
 });
 
+
+
 //& /////////////////////////////
 //&                           &//
 //&         FUNCTIONS         &//
@@ -237,23 +239,39 @@ function dilation(img) {
   return canvas.toDataURL();
 };
 
-
-
-//& /////////////////////////////
-//&                           &//
-//&            FUN            &//
-//&                           &//
-//& /////////////////////////////
-
-const about_GlitchAnimation = getElementById('about_Button');
-
-about_GlitchAnimation.addEventListener('click', function() {
-  
-});
-
 //& /////////////////////////////
 //&                           &//
 //&           ALERTS          &//
 //&                           &//
 //& /////////////////////////////
 
+
+//& /////////////////////////////
+//&                           &//
+//&            Test           &//
+//&                           &//
+//& /////////////////////////////
+
+let num = [1, 2, 3]
+let numbers = [1, 2, 3]
+
+console.log(num == numbers)
+console.log(typeof num)
+
+let userOne = {
+name:'Asabeneh',
+role:'teaching',
+country:'Finland'
+}
+
+let userTwo = {
+name:'Asabeneh',
+role:'teaching',
+country:'Finland'
+}
+
+console.log(userOne == userTwo) 
+
+num = numbers 
+
+console.log(num == numbers)

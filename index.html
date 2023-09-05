@@ -77,22 +77,72 @@
       grayscale images, and even other types of spatially organized data beyond images.
     </p>
   </section>
+  <section id="section1-3">
+    <h2>In this section I can present you the circuit of erosion and dilation MM.</h2>
+    <p>-The second image was the first idea but it has a lot more glitches compared to the third one. Basically the paths' length
+      that lead to the output was different for each input so, for instance the last input (Input9-with blue color) is changing faster
+      from 1 to -1, than the other input. (Keep in mind that the gate has 3 inputs. First is set to positive 1(orange color), second one is the 
+      combination of the previous ones(green color) and the third is Input9(blue color)). So if green is -1 and blue is -1, and we have a change 
+      to our inputs, the blue one will change first and this may resolve in an unexpected behavior of the out put.
+    </p>
+    <p>
+      -Now the third image is a better way of dealing with that (length) problem leading to a less glitchy output. Still though it is not perfect.
+    </p>
+    <p>
+      -To describe the images starting from the first one. We have 9 inputs and 1 output. The inputs form a neighborhood (3x3 table) and the output is the center of the table. 
+      The first image has already set a value of 1(orange color) in the circuit. This means that if at least one other input is 1 (one of nine)
+      the output eventually will be 1 so the center pixel of the image will became white (we consider 1 is #fff). So in the end if you have on the 
+      neighborhood at least one 1, the center pixel of an image will become white (dilation).
+    </p>
+    <p>
+      -The same principle applies for images 2 and 3 but in reverse. Now if at least one input (in the neighbor) is -1 the center pixel will become black (erosion).
+    </p>
+    <p>-On image 4 you can see the inputs and the output together in a diagram.</p>
+    <p>-Also you can always click the picture to enlarge it.</p>
+  </section>
+  <section id="section1-5">
+    <div>
+      <a href="QCAD Images/dilation_Optimized.png" target="_blank">
+        <img src="QCAD Images/dilation_Optimized.png" alt="">
+      </a>
+    </div>
+    <div>
+      <a href="QCAD Images/EDpic1.png" target="_blank">
+        <img src="QCAD Images/EDpic1.png" alt="">
+      </a>
+    </div>
+    <div>
+      <a href="QCAD Images/erosion.png" target="_blank">
+        <img src="QCAD Images/erosion.png" alt="">
+      </a>
+    </div>
+    <div>
+      <a href="QCAD Images/ErosionDiagrams.png" target="_blank">
+        <img src="QCAD Images/ErosionDiagrams.png" alt="">
+      </a>
+    </div>
+  </section>
+  <section id="section1-7">
+    <h3>Here you are able to download the files from QCAD</h3>
+    <div><a href="QCAD Images/QCAD models.zip" download><button>Download</button></a></div>
+  </section>
   <section id="section2">
     <h1>Here you can to render your oun image</h1>
     <div id="instructions">
       <button id="instruction_Button">Instructions 🛈</button>
       <div id="dropdown_Instructions">
-        <p>Here you are able to customize your own Image.</p>
-        <p>You can upload any Image as long as it's jpg, jpeg, png or ico otherwise console.log will print false.</p>
-        <p>There is no database so the image (as also the rendering) is executed completely in your PC.</p>
+        <p>-Here you are able to customize your own Image.</p>
+        <p>-You can upload any Image as long as it's jpg, jpeg, png or ico otherwise console.log will print false.</p>
+        <p>-There is no database so the image (as also the rendering) is executed completely in your PC.</p>
         <p>
-          The neighborhood is set to 11(array of 11x11) in order for the rendering to be visible. If neighborhood was a 3x3 or 5x5 area the 
+          -The neighborhood is set to 11(array of 11x11) in order for the rendering to be visible. If neighborhood was a 3x3 or 5x5 area the 
           effect wouldn't be so distinct. This way it would only make some difference in lower resolution images.
         </p>
+        <p>-Also (except from grayscale) the options may take about 10-20sec to render.</p>
       </div>
     </div>
     <form id="filterForm">
-      <input type="file" id="uploadInput" required>
+      <input type="file" id="uploadInput">
       <img src="" alt="" id="image_displayPreview">
       <label for="r_option">Render Option</label>
       <select name="choice" id="r_option">

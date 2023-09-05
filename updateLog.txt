@@ -2,3 +2,7 @@ Update 0.4
 -Warning now displays when user don't have either picked the PICKER or uploaded an image or both.
 -Links are now ON, on the bottom of the page. Buttons' style: pointer-events: none;
 Update 0.5
+-Screenshots(4) from QCAD are now available with css animation. Now they pop off on a different tab.
+-Description is ready above the screenshots.
+-Download button for files is now available.
+-Hover colors on buttons are now updated to --aquaColor.
